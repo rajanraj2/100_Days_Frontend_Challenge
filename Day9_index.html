@@ -1,0 +1,49 @@
+<!--
+    Link to problem :
+    https://codedamn.com/problem/8Oxl534mLuvN_n9VEpD9f?challengeList=100-days-of-frontend
+
+    learned position property of different kinds using html and css
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Position Property Lab</title>
+		<style>
+			#container{
+				width : 300px;
+				height : 300px;
+				border : 1px solid black;
+			}
+			.box{
+				width : 50px;
+				height : 50px;
+			}
+			#static-box{
+				background-color : blue;
+			}
+			#relative-box{
+				background-color : green;
+				position : relative;
+				top : 20px;
+				left : 20px;
+			}
+			#absolute-box{
+				background-color : red;
+				position : absolute;
+				top : 220px;
+				left : 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="container">
+				<div class="box" id="static-box"></div>
+				<div class="box" id="relative-box"></div>
+				<div class="box" id="absolute-box"></div>
+			</div>
+		</div>
+	</body>
+</html>
