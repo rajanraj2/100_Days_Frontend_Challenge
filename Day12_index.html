@@ -1,0 +1,32 @@
+<!--
+    Link to problem :
+    https://codedamn.com/problem/IkgbK7gYVWvss4kd4W8ar?challengeList=100-days-of-frontend
+
+    CSS column property practice
+-->
+
+<!DOCTYPE html>
+<html lang=""en>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Day12_style.css">
+		<title>Codedamn Lab</title>
+	</head>
+	<body>
+		<div>
+		<button onclick="changeColumnCount(2)">2 Columns</button>
+    <button onclick="changeColumnCount(3)">3 Columns</button>
+    <button onclick="changeColumnCount(4)">4 Columns</button>
+    <button onclick="changeColumnCount(6)">6 Columns</button>
+</div>
+		<div id="container">
+			<div class="box" style="column-count:2;">1</div>
+			<div class="box">2</div>
+			<div class="box" id="span-box">3</div>
+			<div class="box">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+		</div>
+		<script src="Day12_script.js">
+		</script>
+	</body>
+</html>
