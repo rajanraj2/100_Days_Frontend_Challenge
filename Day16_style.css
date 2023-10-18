@@ -1,0 +1,31 @@
+
+.background{
+    height : 400px;
+    width : 250px;
+    background-color : cyan;
+    position : relative;
+
+}
+
+.overlay{
+    opacity : 0;
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s;
+}
+
+.background:hover .overlay{
+    opacity : 1;
+}
+
+.overlay h4{
+    color : white;
+    position : absolute;
+    top : 50%;
+    bottom : 50%;
+
+}
