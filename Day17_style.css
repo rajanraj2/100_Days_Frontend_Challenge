@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;600&display=swap");
+
+body {
+	font-family: "Inter", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f3f4f6; /* Background color for the body */
+}
+
+.profile-header {
+	background-color: #ffffff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+}
+
+.cover-image img {
+	width: 100%; /* Adjust the width as needed */
+	height: 200px; /* Adjust the height as needed */
+	object-fit: cover;
+}
+
+.profile-image img {
+	width: 150px; /* Adjust the width as needed */
+	height: 150px; /* Adjust the height as needed */
+	border-radius: 50%; /* Make the profile image circular */
+	margin: 5px;
+}
+
+h4 {
+	color: #111827; /* Text color */
+	font-size: 20px;
+}
+
+.contact-buttons {
+	margin-top: 20px;
+}
+
+.contact-button {
+	background-color: #d1d5db; /* Border color for buttons */
+	color: #111827; /* Text color for buttons */
+	padding: 10px 20px;
+	border-radius: 20px; /* Style the border radius */
+	margin: 5px;
+	cursor: pointer;
+}
+
+.contact-button:hover {
+	background-color: #9ca3af; /* Change color on hover */
+	color: #ffffff; /* Text color on hover */
+}
+
+/* Add responsive styles for mobile design as needed */
+@media (max-width: 768px) {
+	.cover-image img {
+		height: 150px;
+	}
+	.profile-image img {
+		width: 100px;
+		height: 100px;
+	}
+}
