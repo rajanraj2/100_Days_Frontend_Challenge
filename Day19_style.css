@@ -1,0 +1,26 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.switch {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.switch input[type="radio"] {
+    display: none;
+}
+
+.switch label {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.switch input[type="radio"]:checked + label {
+    background-color: lightblue;
+}
