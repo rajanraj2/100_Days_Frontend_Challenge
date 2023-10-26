@@ -1,0 +1,40 @@
+<!--
+    Link to problem :
+    https://codedamn.com/problem/IOVRZDOZJbv3HeQKG6liX?challengeList=100-days-of-frontend
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Codedamn Lab</title>
+    <style>
+        /* Define a CSS variable */
+        :root {
+            --primaryColor: blue;
+        }
+
+        /* Use the CSS variable to set the background color of the div with id "box" */
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: var(--primaryColor);
+            cursor: pointer; /* Change cursor to a pointer to indicate clickability */
+        }
+    </style>
+</head>
+<body>
+    <!-- Add a div with an id of 'box' -->
+    <div id="box"></div>
+
+    <script>
+        // Get the div element with id "box"
+        const box = document.getElementById("box");
+
+        // Add a click event listener to the div
+        box.addEventListener("click", function() {
+            // Change the value of the CSS variable to red
+            document.documentElement.style.setProperty("--primaryColor", "red");
+        });
+    </script>
+</body>
+</html>
