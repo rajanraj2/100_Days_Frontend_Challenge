@@ -1,0 +1,53 @@
+// Link to problem :
+// https://codedamn.com/problem/7ZFCXt3K-93hwR7F9M9u-?challengeList=100-days-of-frontend
+
+/**
+ * Calculates the energy points earned by the player.
+ * @param {number[]} magicalItems
+ * @param {number} level
+ * @returns {number} - Energy Points of the user
+ */
+export const getEnergyPoints = (magicalItems, level) => {
+    // Initialize a Set to store unique multiples
+    const uniqueMultiples = new Set();
+
+    // Iterate through each magical item
+    magicalItems.forEach((item) => {
+        if (item === 0) {
+            // Skip if the magical item is 0
+            return;
+        }
+
+        // Calculate multiples of the item less than the level
+        for (let i = item; i < level; i += item) {
+            uniqueMultiples.add(i);
+        }
+    });
+
+    // Calculate the sum of unique multiples
+    const energyPoints = Array.from(uniqueMultiples).reduce(
+        (sum, multiple) => sum + multiple,
+        0
+    );
+
+    return energyPoints;
+};
+
+// Sample Tests
+console.log(getEnergyPoints([3, 5], 20)); // Expected Output: 78
+console.log(getEnergyPoints([3, 5, 8, 12], 24)); // Expected Output: 143
+console.log(getEnergyPoints([0], 1)); // Expected Output: 0
+// Additional Test Cases
+console.log(getEnergyPoints([2], 10)); // Expected Output: 20
+console.log(getEnergyPoints([2, 3], 10)); // Expected Output: 32
+console.log(getEnergyPoints([4, 6, 8], 20)); // Expected Output: 76
+console.log(getEnergyPoints([4, 6, 8], 30)); // Expected Output: 217
+console.log(getEnergyPoints([2, 3, 5], 100)); // Expected Output: 2508
+console.log(getEnergyPoints([2, 4, 8], 100)); // Expected Output: 646
+console.log(getEnergyPoints([15, 21, 35], 100)); // Expected Output: 1191
+console.log(getEnergyPoints([10, 15, 30], 100)); // Expected Output: 1500
+console.log(getEnergyPoints([1, 2, 3], 10)); // Expected Output: 38
+console.log(getEnergyPoints([2, 3, 4], 10)); // Expected Output: 38
+console.log(getEnergyPoints([1, 5, 10], 100)); // Expected Output: 15045
+console.log(getEnergyPoints([1, 0], 10)); // Expected Output: 45
+console.log(getEnergyPoints([0, 2, 3], 10)); // Expected Output: 32
