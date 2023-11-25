@@ -1,9 +1,11 @@
 // index.js
-const sum = (...args) => {
-    return args.reduce((acc, val) => acc + val, 0);
-};
-export default sum;
 
-console.log(sum(1, 2, 3, 4, 5));      // returns 15
-console.log(sum(2, 342, 54, 2, 51));  // returns 451
-console.log(sum(1, 12, 34, 2, 42, 12)); // returns 103
+// Define the sum function using the spread operator
+const sum = (...args) => {
+    // Use the reduce method to calculate the sum of all arguments
+    return args.reduce((acc, current) => acc + current, 0);
+  };
+  
+  // Export the sum function using ESM syntax
+  export { sum };
+  
